@@ -1,0 +1,270 @@
+.footer {
+    background-color: #101828;
+    color: #FFFFFF;
+    padding: 60px 0 0 0;
+    margin-top: 80px;
+
+    .footer-container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        gap: 60px;
+        align-items: flex-start;
+    }
+
+    .footer-left {
+        flex: 1;
+        max-width: 400px;
+
+        .footer-logo {
+            margin-bottom: 30px;
+
+            .logo-icon {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                .character {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: -5px;
+                        left: -5px;
+                        right: -5px;
+                        bottom: -5px;
+                        background: linear-gradient(135deg, #87CEEB, #5B9BD5);
+                        border-radius: 50%;
+                        z-index: -1;
+                        opacity: 0.3;
+                    }
+                }
+
+                .logo-text {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    .mixi {
+                        font-family: "Archivo Medium";
+                        font-size: 24px;
+                        color: #87CEEB;
+                        font-style: italic;
+                    }
+
+                    .vivu {
+                        font-family: "Archivo Medium";
+                        font-size: 24px;
+                        color: #87CEEB;
+                        font-style: italic;
+                        position: relative;
+
+                        svg {
+                            position: absolute;
+                            top: -8px;
+                            right: -12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .company-info {
+            .company-name {
+                font-family: "Archivo Medium";
+                font-size: 16px;
+                color: #FFFFFF;
+                opacity: 0.65;
+                margin-bottom: 16px;
+                line-height: 1.4;
+            }
+
+            .company-address {
+                font-family: "Archivo Regular";
+                font-size: 14px;
+                color: #FFFFFF;
+                margin-bottom: 12px;
+                line-height: 1.5;
+                opacity: 0.65;
+            }
+
+            .business-registration {
+                font-family: "Archivo Regular";
+                font-size: 14px;
+                color: #FFFFFF;
+                line-height: 1.5;
+                opacity: 0.65;
+            }
+        }
+    }
+
+    .footer-right {
+        flex: 2;
+        display: flex;
+        gap: 60px;
+        justify-content: flex-end;
+
+        .footer-column {
+            min-width: 180px;
+
+            .column-title {
+                font-family: "Archivo Medium";
+                font-size: 16px;
+                color: #98A2B3;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .footer-links {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    margin-bottom: 12px;
+
+                    a {
+                        font-family: "Archivo Medium";
+                        font-size: 14px;
+                        color: #FFFFFF;
+                        opacity: 0.65;
+                        text-decoration: none;
+                        transition: color 0.2s ease;
+
+                        &:hover {
+                            color: #87CEEB;
+                        }
+                    }
+
+                    &.contact-info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+
+                        .contact-label {
+                            font-family: "Archivo Regular";
+                            font-size: 12px;
+                            color: #98A2B3;
+                        }
+
+                        .contact-value {
+                            font-family: "Archivo Medium";
+                            font-size: 14px;
+                            color: #FFFFFF;
+                            text-decoration: none;
+                            transition: color 0.2s ease;
+
+                            &:hover {
+                                color: #87CEEB;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-separator {
+        height: 1px;
+        background-color: #374151;
+        margin-top: 40px;
+    }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+    .footer {
+        .footer-container {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .footer-right {
+            justify-content: flex-start;
+            gap: 40px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 0 0;
+
+        .footer-container {
+            padding: 0 16px;
+        }
+
+        .footer-right {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .footer-left {
+            .footer-logo {
+                .logo-icon {
+                    .logo-text {
+                        .mixi, .vivu {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        .footer-container {
+            gap: 30px;
+        }
+
+        .footer-left {
+            .company-info {
+                .company-name {
+                    font-size: 14px;
+                }
+
+                .company-address,
+                .business-registration {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .footer-right {
+            .footer-column {
+                .column-title {
+                    font-size: 14px;
+                }
+
+                .footer-links {
+                    li {
+                        a {
+                            font-size: 12px;
+                        }
+
+                        &.contact-info {
+                            .contact-label {
+                                font-size: 11px;
+                            }
+
+                            .contact-value {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,189 @@
+import React, { useState } from 'react';
+
+// Interface cho dữ liệu tour
+interface TourData {
+    id: number;
+    name: string;
+    location: string;
+    description: string;
+    price: string;
+    image: string;
+    alt: string;
+    launchYear: string;
+    material: string;
+    rooms: number;
+    type: 'featured' | 'regular';
+}
+
+// Mảng dữ liệu các tour
+const tourData: TourData[] = [
+    {
+        id: 1,
+        name: "Du thuyền Heritage Bình Chuẩn Cát Bà",
+        location: "Cát Bà",
+        description: "Du thuyền Heritage Bình Chuẩn Cát Bà",
+        price: "",
+        image: "/images/category/vinhhalong.jpg",
+        alt: "Du thuyền Heritage",
+        launchYear: "",
+        material: "",
+        rooms: 0,
+        type: "featured"
+    },
+    {
+        id: 4,
+        name: "Du thuyền Cát Bà Explorer",
+        location: "Cát Bà",
+        description: "Du thuyền Cát Bà Explorer",
+        price: "",
+        image: "/images/category/vinhhalan.jpg",
+        alt: "Du thuyền Cát Bà Explorer",
+        launchYear: "",
+        material: "",
+        rooms: 0,
+        type: "featured"
+    },
+    {
+        id: 5,
+        name: "Du thuyền Cát Bà Premium",
+        location: "Cát Bà",
+        description: "Du thuyền Cát Bà Premium",
+        price: "",
+        image: "/images/category/daocatba.jpg",
+        alt: "Du thuyền Cát Bà Premium",
+        launchYear: "",
+        material: "",
+        rooms: 0,
+        type: "featured"
+    }
+];
+
+// Mảng các category để lọc
+const categories = [
+    { id: 'all', name: 'Tất cả', value: 'all' },
+    { id: 'halong', name: 'Vịnh Hạ Long', value: 'halong' },
+    { id: 'catba', name: 'Cát Bà', value: 'catba' }
+];
+
+const CategoryCN: React.FC = () => {
+    const [selectedCategory, setSelectedCategory] = useState<string>('all');
+    const [filteredTours, setFilteredTours] = useState<TourData[]>(tourData);
+
+    // Hàm lọc tour theo category
+    const filterToursByCategory = (category: string) => {
+        setSelectedCategory(category);
+        
+        if (category === 'all') {
+            setFilteredTours(tourData);
+        } else {
+            const filtered = tourData.filter(tour => {
+                if (category === 'halong') {
+                    return tour.location === 'Vịnh Hạ Long';
+                } else if (category === 'catba') {
+                    return tour.location === 'Cát Bà';
+                }
+                return true;
+            });
+            setFilteredTours(filtered);
+        }
+    };
+
+    // Hàm render tour list với layout phù hợp
+    const renderTourList = () => {
+        if (selectedCategory === 'catba') {
+            // Chỉ hiển thị tour Cát Bà với layout đặc biệt
+            const catbaTours = filteredTours.filter(tour => tour.location === 'Cát Bà');
+            return (
+                <div className="tour-list">
+                    {catbaTours.map(tour => (
+                        <div key={tour.id} className="tour-card-category">
+                            <div className="card-images-category">
+                                <img src={tour.image} alt={tour.alt} />
+                            </div>
+                            <div className="tour-info-category">
+                                <h4>{tour.name}</h4>
+                                <div className="info-checkout">
+                                    <div className="btn btn-css-category">Đặt ngay</div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            );
+        } else {
+            // Hiển thị tất cả tour với layout thông thường
+            return (
+                <div className="tour-list">
+                    {filteredTours.map(tour => renderTourCard(tour))}
+                </div>
+            );
+        }
+    };
+
+    // Render tour card dựa trên type
+    const renderTourCard = (tour: TourData) => {
+        if (tour.type === 'featured') {
+            return (
+                <div key={tour.id} className="tour-card-category">
+                    <div className="card-images-category">
+                        <img src={tour.image} alt={tour.alt} />
+                    </div>
+                    <div className="tour-info-category">
+                        <h4>{tour.name}</h4>
+                        <div className="info-checkout">
+                            <div className="btn btn-css-category">Xem ngay</div>
+                        </div>
+                    </div>
+                </div>
+            );
+        } else {
+            return (
+                <div key={tour.id} className="tour-card">
+                    <img src={tour.image} alt={tour.alt} />
+                    <div className="tour-info">
+                        <span>{tour.location}</span>
+                        <h4>{tour.name}</h4>
+                        <p>{tour.description}</p>
+                        <strong>{tour.price}</strong>
+                        <button className="btn btn-primary">Xem ngay</button>
+                    </div>
+                </div>
+            );
+        }
+    };
+    return (
+        <>
+            <section className="popular-category">
+                <div className="category-infomation">
+                    <div className="infomation-name">
+                        <span>Các điểm đến của Tovivu</span>
+                    </div>
+                    <p>Khám phá vẻ đẹp tuyệt vời của Du thuyền Hạ Long: Hành trình đến thiên đường thiên nhiên</p>
+                </div>
+
+                {/* Category Filter Buttons */}
+                {/* <div className="category-filters">
+                    {categories.map(category => (
+                        <button
+                            key={category.id}
+                            className={`filter-btn ${selectedCategory === category.value ? 'active' : ''}`}
+                            onClick={() => filterToursByCategory(category.value)}
+                        >
+                            {category.name}
+                        </button>
+                    ))}
+                </div> */}
+
+                {renderTourList()}
+
+                {/* <div className="popularship">
+                    <button>Xem tất cả du thuyền <svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10" fill="none">
+                        <path d="M15 1.66797L18.3333 5.0013M18.3333 5.0013L15 8.33464M18.3333 5.0013H1.66666" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></button>
+                </div> */}
+            </section>
+        </>
+    )
+}
+
+export default CategoryCN;

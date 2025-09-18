@@ -1,0 +1,206 @@
+.popular-tours-news,
+.destinations,
+.news {
+    max-width: 1240px;
+    margin: 56px auto;
+}
+.popular-tours,
+.destinations,
+.news {
+    max-width: 1240px;
+    margin: 56px auto;
+}
+.popular-tours-news {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.tour-infomation-news {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    .info1-news {
+        width: 400px;
+        font-size: 22px;
+        font-family: "Archivo Medium";
+    }
+    .info2-news {
+        width: 488px;
+        line-height: 28px;
+        font-size: 16px;
+        font-family: "Archivo Medium";
+    }
+}
+
+.tour-list,
+.destination-list,
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 32px;
+    row-gap: 20px;
+    justify-content: center;
+}
+.tour-card-news,
+.destination-card,
+.news-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+.tour-card-news img,
+.destination-card img,
+.news-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+.tour-card-news {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 32px;
+    border: 1px solid var(--gray-200, #eaecf0);
+    background: var(--base-white, #fff);
+    box-shadow:
+        0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+        0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+    .card-images-news {
+        padding: 20px;
+
+        img {
+            border-radius: 30px;
+        }
+    }
+}
+.tour-info-news,
+.news-card {
+    padding: 0 20px;
+}
+.tour-info-news span {
+    font-size: 12px;
+    font-family: "Archivo Regular";
+    color: #4b5563;
+    background: #eef6f7;
+    padding: 6px 10px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+}
+.tour-info-news h4 {
+    margin: 10px 0 6px;
+    color: #475467;
+    font-size: 18px;
+    font-family: "Archivo Medium";
+}
+.tour-info-news p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 20px;
+    height: 40px;
+    font-size: 14px;
+    font-family: "Archivo Medium";
+    color: #747a84;
+    // display: flex;
+    // align-items: center;
+    // gap: 5px;
+    width: fit-content;
+}
+.info-checkout-news strong {
+    display: block;
+    margin: 12px 0 10px;
+    color: #475467;
+    font-family: "Archivo Regular";
+    font-size: 14px;
+}
+.tour-card-news .info-checkout-news {
+    padding: 1px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tour-info-news button {
+    padding: 10px 18px;
+    border-radius: 999px;
+    z-index: 100;
+}
+
+.destination-card span {
+    display: block;
+    text-align: center;
+    margin: 8px 0;
+    font-weight: bold;
+}
+.destination-card .btn-css {
+    display: block;
+    margin: 12px auto;
+    background: #eee;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #222;
+    cursor: pointer;
+}
+.btn-css {
+    border: none;
+    color: #0e4f4f;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-family: "Archivo Medium";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #6ad7d7;
+    z-index: 100;
+}
+.btn-css:hover {
+    background-color: #0e4f4f;
+    color: #fff;
+    cursor: pointer;
+    fill: #fff;
+}
+.news-card h4 {
+    font-size: 15px;
+    margin: 8px 0;
+}
+.news-card p {
+    font-size: 13px;
+    color: #666;
+}
+.news-card span {
+    font-size: 12px;
+    color: #888;
+}
+
+.popularship {
+    display: flex;
+    justify-content: center;
+    button {
+        padding: 10px 16px;
+        border: none;
+        line-height: 30px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        font-family: "Archivo Medium";
+        gap: 10px;
+        background: linear-gradient(0deg, #fff, #fff), linear-gradient(0deg, #eaecf0, #eaecf0);
+        border: 1px solid #eaecf0;
+    }
+    :hover {
+        background: #f9fafb;
+        color: #344054;
+        fill: #344054;
+        cursor: pointer;
+    }
+}
