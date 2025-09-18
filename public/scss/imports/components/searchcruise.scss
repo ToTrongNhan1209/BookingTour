@@ -254,7 +254,7 @@
         }
 
         .cruise-image {
-            width: 300px;
+            // width: 300px;
             height: 200px;
             position: relative;
             flex-shrink: 0;
@@ -438,12 +438,12 @@
 // Filter Modal
 .filter-modal {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    width: 90%;
-    max-width: 400px;
-    max-height: 80vh;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  width: 320px;
+  max-width: 80vw;
+  height: 100vh;
     background: #ffffff;
     border-radius: 16px;
     z-index: 1002;
@@ -452,8 +452,8 @@
     overflow: hidden;
 
     &.active {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    transform: translateX(0);
     }
 
     .filter-modal-header {
@@ -653,12 +653,22 @@
             order: 1;
             max-height: none;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .search-cruise-page {
+        padding: 16px 0;
+
+        .search-container {
+            padding: 0 16px;
+        }
 
         .cruise-card {
             flex-direction: column;
 
             .cruise-image {
-                width: 100%;
+                // width: 100%;
                 height: 200px;
             }
 

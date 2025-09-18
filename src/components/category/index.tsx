@@ -15,8 +15,8 @@ interface TourData {
     type: 'featured' | 'regular';
 }
 
-// Mảng dữ liệu các tour
-const tourData: TourData[] = [
+// Mảng dữ liệu mặc định (có thể được override qua props)
+const defaultTourData: TourData[] = [
     {
         id: 1,
         name: "Du thuyền Heritage Bình Chuẩn Cát Bà",
@@ -58,25 +58,32 @@ const tourData: TourData[] = [
     }
 ];
 
-// Mảng các category để lọc
+// Mảng các category để lọc (tuỳ chọn sử dụng)
 const categories = [
     { id: 'all', name: 'Tất cả', value: 'all' },
     { id: 'halong', name: 'Vịnh Hạ Long', value: 'halong' },
     { id: 'catba', name: 'Cát Bà', value: 'catba' }
 ];
 
-const CategoryCN: React.FC = () => {
+type CategoryProps = {
+    title?: string;
+    subtitle?: string;
+    tours?: TourData[];
+};
+
+const CategoryCN: React.FC<CategoryProps> = ({ title, subtitle, tours }) => {
+    const sourceTours = tours && tours.length > 0 ? tours : defaultTourData;
     const [selectedCategory, setSelectedCategory] = useState<string>('all');
-    const [filteredTours, setFilteredTours] = useState<TourData[]>(tourData);
+    const [filteredTours, setFilteredTours] = useState<TourData[]>(sourceTours);
 
     // Hàm lọc tour theo category
     const filterToursByCategory = (category: string) => {
         setSelectedCategory(category);
         
         if (category === 'all') {
-            setFilteredTours(tourData);
+            setFilteredTours(sourceTours);
         } else {
-            const filtered = tourData.filter(tour => {
+            const filtered = sourceTours.filter(tour => {
                 if (category === 'halong') {
                     return tour.location === 'Vịnh Hạ Long';
                 } else if (category === 'catba') {
@@ -156,9 +163,11 @@ const CategoryCN: React.FC = () => {
             <section className="popular-category">
                 <div className="category-infomation">
                     <div className="infomation-name">
-                        <span>Các điểm đến của Tovivu</span>
+                        <span>{title || 'Các điểm đến của Tovivu'}</span>
                     </div>
-                    <p>Khám phá vẻ đẹp tuyệt vời của Du thuyền Hạ Long: Hành trình đến thiên đường thiên nhiên</p>
+                    { (subtitle || 'Khám phá vẻ đẹp tuyệt vời của Du thuyền Hạ Long: Hành trình đến thiên đường thiên nhiên') && (
+                        <p>{subtitle || 'Khám phá vẻ đẹp tuyệt vời của Du thuyền Hạ Long: Hành trình đến thiên đường thiên nhiên'}</p>
+                    )}
                 </div>
 
                 {/* Category Filter Buttons */}

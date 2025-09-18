@@ -5,15 +5,22 @@ import PopularTour from '../../components/PopularTour';
 import CategoryCN from '../../components/category';
 import News from '../../components/news';
 import Footer from '../../components/Footer';
+
+
 const Homepage: React.FC = () => {
     return (
         <>
-        <Header />
-        <Hero />
-        <PopularTour />
-        <CategoryCN />
-        <News />
-        <Footer />
+            <Header />
+            <Hero
+                title='Bạn lựa chọn du thuyền Hạ Long nào?'
+                subtitle='Hơn 100 tour du thuyền hạng sang giá tốt đang chờ bạn'
+                videoSrc='./video/video.mp4'
+                searchPlaceholder='Nhập tên du thuyền'
+            />
+            <PopularTour />
+            <CategoryCN />
+            <News />
+            <Footer />
         </>
     )
 }
