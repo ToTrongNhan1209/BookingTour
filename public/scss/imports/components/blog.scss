@@ -1,0 +1,52 @@
+.Blog-container {
+    max-width: 1240px;
+    margin: 56px auto;
+}
+.blog-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; 
+    align-items: flex-start;
+    text-align: left;
+    flex-grow: 1;
+    padding-top: 64px;
+        label{
+            width: 488px;
+            font-size: 18px;
+            line-height: 28px;
+            font-family: "Archivo Regular";
+            color: #475467;
+        }
+}
+.blog-header-title {
+    font-size: 36px;
+    line-height: 40px;
+    font-family: "Archivo Bold";
+
+    h4{
+        margin: 0;
+    }
+}
+.blog-header-description {
+    font-size: 16px;
+}
+.blog-header-image {
+    width: 100%;
+    height: 100%;
+}
+.blog-header-border {
+    width: 100%;
+    height: 100%;
+}
+
+.blog-tab {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.blog-tab-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+

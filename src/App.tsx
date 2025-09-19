@@ -7,6 +7,7 @@ import Homepage from './pages/Homepage'
 import Hotel from './pages/Hotel'
 import SearchCruisePage from './pages/SearchCruise'
 import SearchHotelPage from './pages/SearchHotel'
+import Blog from './pages/Blog'
 function App(): ReactElement {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function App(): ReactElement {
           <Route path="/khach-san" element={<Hotel />} />
           <Route path="/tim-du-thuyen" element={<SearchCruisePage />} />
           <Route path="/tim-khach-san" element={<SearchHotelPage />} />
+          <Route path="/tin-tuc" element={<Blog />} />
         </Routes>
         </BrowserRouter>
   )

@@ -12,7 +12,7 @@ const Hotel: React.FC = () => {
             <Hero
                 title='Bạn muốn đặt khách sạn ở đâu?'
                 subtitle='Hàng nghìn phòng giá tốt đang chờ bạn'
-                videoSrc='./video/video.mp4'
+                videoSrc='./video/videoressort.mp4'
                 searchPlaceholder='Nhập tên khách sạn hoặc khu vực'
             />
             <PopularHotel />

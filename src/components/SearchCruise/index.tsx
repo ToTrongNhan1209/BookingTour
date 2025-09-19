@@ -147,7 +147,7 @@ const SearchCruise: React.FC = () => {
             <div className="rating-badge">
                 <div className="rating-content">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="#f79009">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
                     <span className="rating-text">{rating} ({reviewCount}) đánh giá</span>
                 </div>
@@ -183,12 +183,12 @@ const SearchCruise: React.FC = () => {
 
     // Lọc du thuyền
     const filteredCruises = cruiseData.filter(cruise => {
-        const matchesStarRating = filters.starRating.length === 0 || 
+        const matchesStarRating = filters.starRating.length === 0 ||
             filters.starRating.some(rating => Math.floor(cruise.rating) === rating);
-        
+
         const matchesAmenities = filters.amenities.length === 0 ||
             filters.amenities.every(amenity => cruise.amenities.includes(amenity));
-        
+
         return matchesStarRating && matchesAmenities;
     });
 
@@ -225,7 +225,7 @@ const SearchCruise: React.FC = () => {
                 </div>
                 <h3 className="cruise-title">{cruise.name}</h3>
                 <p className="cruise-description">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <g clipPath="url(#clip0_219_9124)">
                             <path d="M10 8.49211V11.6679M10 8.49211C10.2331 8.49211 10.4637 8.5408 10.6767 8.63545L17.5001 11.6679C17.5132 13.4264 17.0465 15.1551 16.1501 16.6679M10 8.49211C9.76691 8.49211 9.53645 8.5408 9.32342 8.63545L2.50008 11.6679C2.4615 14.0377 3.29485 16.339 4.84175 18.1346M10 1.66797V4.16797M15.8334 10.8346V5.83464C15.8334 5.39261 15.6578 4.96868 15.3452 4.65612C15.0326 4.34356 14.6087 4.16797 14.1667 4.16797H5.83335C5.39133 4.16797 4.9674 4.34356 4.65484 4.65612C4.34228 4.96868 4.16669 5.39261 4.16669 5.83464V10.8346M1.66669 17.5013C2.16669 17.918 2.66669 18.3346 3.75002 18.3346C5.83335 18.3346 5.83335 16.668 7.91669 16.668C9.00002 16.668 9.50002 17.0846 10 17.5013C10.5 17.918 11 18.3346 12.0834 18.3346C14.1667 18.3346 14.1667 16.668 16.25 16.668C17.3334 16.668 17.8334 17.0846 18.3334 17.5013" stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </g>
@@ -306,73 +306,73 @@ const SearchCruise: React.FC = () => {
                     {filteredCruises.map(cruise => renderCruiseCard(cruise))}
 
                     <div className="pagination-container">
-                <div className="pagination-info">
-                    <span>Đang xem: {startItem} của {totalItems}</span>
-                </div>
-                <div className="pagination-controls">
-                    <button 
-                        className="pagination-btn prev-btn"
-                        onClick={() => handlePageChange(currentPage - 1)}
-                        disabled={currentPage === 1}
-                    >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                            <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                        Trước
-                    </button>
-                    
-                    <div className="pagination-numbers">
-                        {currentPage > 3 && (
-                            <>
-                                <button 
-                                    className="pagination-number"
-                                    onClick={() => handlePageChange(1)}
-                                >
-                                    1
-                                </button>
-                                {currentPage > 4 && <span className="pagination-ellipsis">...</span>}
-                            </>
-                        )}
-                        
-                        {Array.from({ length: Math.min(3, totalPages) }, (_, i) => {
-                            const page = Math.max(1, currentPage - 1) + i;
-                            if (page > totalPages) return null;
-                            return (
-                                <button
-                                    key={page}
-                                    className={`pagination-number ${page === currentPage ? 'active' : ''}`}
-                                    onClick={() => handlePageChange(page)}
-                                >
-                                    {page}
-                                </button>
-                            );
-                        })}
-                        
-                        {currentPage < totalPages - 2 && (
-                            <>
-                                {currentPage < totalPages - 3 && <span className="pagination-ellipsis">...</span>}
-                                <button 
-                                    className="pagination-number"
-                                    onClick={() => handlePageChange(totalPages)}
-                                >
-                                    {totalPages}
-                                </button>
-                            </>
-                        )}
+                        <div className="pagination-info">
+                            <span>Đang xem: {startItem} của {totalItems}</span>
+                        </div>
+                        <div className="pagination-controls">
+                            <button
+                                className="pagination-btn prev-btn"
+                                onClick={() => handlePageChange(currentPage - 1)}
+                                disabled={currentPage === 1}
+                            >
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                                Trước
+                            </button>
+
+                            <div className="pagination-numbers">
+                                {currentPage > 3 && (
+                                    <>
+                                        <button
+                                            className="pagination-number"
+                                            onClick={() => handlePageChange(1)}
+                                        >
+                                            1
+                                        </button>
+                                        {currentPage > 4 && <span className="pagination-ellipsis">...</span>}
+                                    </>
+                                )}
+
+                                {Array.from({ length: Math.min(3, totalPages) }, (_, i) => {
+                                    const page = Math.max(1, currentPage - 1) + i;
+                                    if (page > totalPages) return null;
+                                    return (
+                                        <button
+                                            key={page}
+                                            className={`pagination-number ${page === currentPage ? 'active' : ''}`}
+                                            onClick={() => handlePageChange(page)}
+                                        >
+                                            {page}
+                                        </button>
+                                    );
+                                })}
+
+                                {currentPage < totalPages - 2 && (
+                                    <>
+                                        {currentPage < totalPages - 3 && <span className="pagination-ellipsis">...</span>}
+                                        <button
+                                            className="pagination-number"
+                                            onClick={() => handlePageChange(totalPages)}
+                                        >
+                                            {totalPages}
+                                        </button>
+                                    </>
+                                )}
+                            </div>
+
+                            <button
+                                className="pagination-btn next-btn"
+                                onClick={() => handlePageChange(currentPage + 1)}
+                                disabled={currentPage === totalPages}
+                            >
+                                Tiếp
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                    
-                    <button 
-                        className="pagination-btn next-btn"
-                        onClick={() => handlePageChange(currentPage + 1)}
-                        disabled={currentPage === totalPages}
-                    >
-                        Tiếp
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                            <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
                 </div>
             </div>
 
@@ -381,7 +381,7 @@ const SearchCruise: React.FC = () => {
             {/* Filter Toggle Button for Mobile */}
             <button className="filter-toggle" onClick={openFilterModal}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                    <path d="M3 4h18M3 12h18M3 20h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                    <path d="M3 4h18M3 12h18M3 20h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                 </svg>
                 Lọc kết quả
             </button>
@@ -395,7 +395,7 @@ const SearchCruise: React.FC = () => {
                             ×
                         </button>
                     </div>
-                    
+
                     <div className="filter-modal-content">
                         {/* Star Rating Filter */}
                         <div className="filter-section">
@@ -433,7 +433,7 @@ const SearchCruise: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className="filter-modal-footer">
                         <button className="btn btn-secondary" onClick={resetFilters}>
                             Đặt lại
