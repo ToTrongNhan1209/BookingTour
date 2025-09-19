@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header';
-import SearchCruise from '../../components/SearchCruise';
+import SearchHotel from '../../components/SearchHotel';
+
 import Footer from '../../components/Footer';
 import Hero from '../../components/Hero';    
 const SearchHotelPage: React.FC = () => {
@@ -14,7 +15,7 @@ const SearchHotelPage: React.FC = () => {
                 searchPlaceholder='Nhập tên khách sạn'
             />
 
-            <SearchCruise />
+            <SearchHotel />
             <Footer />
             </div>
         </>

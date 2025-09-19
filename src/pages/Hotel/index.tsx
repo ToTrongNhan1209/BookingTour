@@ -3,7 +3,7 @@ import Header from '../../components/Header';
 import Hero from '../../components/Hero';
 import PopularHotel from '../../components/PopularHotel';
 import CategoryCN from '../../components/category';
-import News from '../../components/news';
+// import News from '../../components/news';
 import Footer from '../../components/Footer';
 const Hotel: React.FC = () => {
     return (

@@ -23,7 +23,7 @@ const Header: React.FC = () => {
                             <a href="/tim-du-thuyen">Tìm du thuyền</a>
                             <a href="#">Tìm vé máy bay</a>
                             <a href="/khach-san">Tìm khách sạn</a>
-                            <a href="#">Tìm địa điểm</a>
+                            <a href="/tin-tuc">Tin tức</a>
                             <a href="#">Về chúng tôi</a>
                         </nav>
                     </div>
