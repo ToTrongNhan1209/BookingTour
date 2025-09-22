@@ -17,53 +17,17 @@ interface TourData {
 
 // Mảng dữ liệu mặc định (có thể được override qua props)
 const defaultTourData: TourData[] = [
-    {
-        id: 1,
-        name: "Du thuyền Heritage Bình Chuẩn Cát Bà",
-        location: "Cát Bà",
-        description: "Du thuyền Heritage Bình Chuẩn Cát Bà",
-        price: "",
-        image: "/images/category/vinhhalong.jpg",
-        alt: "Du thuyền Heritage",
-        launchYear: "",
-        material: "",
-        rooms: 0,
-        type: "featured"
-    },
-    {
-        id: 4,
-        name: "Du thuyền Cát Bà Explorer",
-        location: "Cát Bà",
-        description: "Du thuyền Cát Bà Explorer",
-        price: "",
-        image: "/images/category/vinhhalan.jpg",
-        alt: "Du thuyền Cát Bà Explorer",
-        launchYear: "",
-        material: "",
-        rooms: 0,
-        type: "featured"
-    },
-    {
-        id: 5,
-        name: "Du thuyền Cát Bà Premium",
-        location: "Cát Bà",
-        description: "Du thuyền Cát Bà Premium",
-        price: "",
-        image: "/images/category/daocatba.jpg",
-        alt: "Du thuyền Cát Bà Premium",
-        launchYear: "",
-        material: "",
-        rooms: 0,
-        type: "featured"
-    }
+    { id: 1, name: 'Vịnh Hạ Long', location: 'Vịnh Hạ Long', description: 'Vịnh Hạ Long ', price: '', image: '/images/khachsan/ninhbinh.webp', alt: 'Resort ABC', launchYear: '', material: '', rooms: 0, type: 'featured' },
+    { id: 2, name: 'Vịnh Lan Hạ', location: 'Vịnh Lan Hạ', description: 'Vịnh Lan Hạ ', price: '', image: '/images/khachsan/danang.webp', alt: 'Resort ABC', launchYear: '', material: '', rooms: 0, type: 'featured' },
+    { id: 3, name: 'Đảo Cát Bà', location: 'Đảo Cát Bà', description: 'Đảo Cát Bà ', price: '', image: '/images/khachsan/nhatrang.webp', alt: 'Resort ABC', launchYear: '', material: '', rooms: 0, type: 'featured' },
 ];
 
-// Mảng các category để lọc (tuỳ chọn sử dụng)
-const categories = [
-    { id: 'all', name: 'Tất cả', value: 'all' },
-    { id: 'halong', name: 'Vịnh Hạ Long', value: 'halong' },
-    { id: 'catba', name: 'Cát Bà', value: 'catba' }
-];
+// // Mảng các category để lọc (tuỳ chọn sử dụng)
+// const categories = [
+//     { id: 'all', name: 'Tất cả', value: 'all' },
+//     { id: 'halong', name: 'Vịnh Hạ Long', value: 'halong' },
+//     { id: 'catba', name: 'Cát Bà', value: 'catba' }
+// ];
 
 type CategoryProps = {
     title?: string;
@@ -76,24 +40,24 @@ const CategoryCN: React.FC<CategoryProps> = ({ title, subtitle, tours }) => {
     const [selectedCategory, setSelectedCategory] = useState<string>('all');
     const [filteredTours, setFilteredTours] = useState<TourData[]>(sourceTours);
 
-    // Hàm lọc tour theo category
-    const filterToursByCategory = (category: string) => {
-        setSelectedCategory(category);
+    // // Hàm lọc tour theo category
+    // const filterToursByCategory = (category: string) => {
+    //     setSelectedCategory(category);
         
-        if (category === 'all') {
-            setFilteredTours(sourceTours);
-        } else {
-            const filtered = sourceTours.filter(tour => {
-                if (category === 'halong') {
-                    return tour.location === 'Vịnh Hạ Long';
-                } else if (category === 'catba') {
-                    return tour.location === 'Cát Bà';
-                }
-                return true;
-            });
-            setFilteredTours(filtered);
-        }
-    };
+    //     if (category === 'all') {
+    //         setFilteredTours(sourceTours);
+    //     } else {
+    //         const filtered = sourceTours.filter(tour => {
+    //             if (category === 'halong') {
+    //                 return tour.location === 'Vịnh Hạ Long';
+    //             } else if (category === 'catba') {
+    //                 return tour.location === 'Cát Bà';
+    //             }
+    //             return true;
+    //         });
+    //         setFilteredTours(filtered);
+    //     }
+    // };
 
     // Hàm render tour list với layout phù hợp
     const renderTourList = () => {

@@ -1,0 +1,128 @@
+// .container{
+//         width: 100%;
+//         max-width: 1280px;
+//         margin: auto;
+//         padding: 16px 32px;
+// }
+.blog-detail-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 48px 0 0 0;
+    background: #fff;
+}
+.link-direc {
+    border-bottom: 1px solid #eaecf0;
+
+    .direc-detail {
+        width: 100%;
+        max-width: 1180px;
+        margin: auto;
+        padding: 10px 32px;
+    }
+}
+
+.blog-detail-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+    color: #475467;
+    align-self: center;
+    padding: 12px 0;
+
+    .breadcrumb-icon {
+        color: #0e4f4f;
+        fill: #fff;
+        stroke: #0e4f4f;
+        cursor: pointer;
+    }
+    .breadcrumb-separator {
+        display: flex;
+        align-items: center;
+        color: #0e4f4f;
+        fill: #fff;
+        stroke: #0e4f4f;
+        cursor: pointer;
+    }
+
+    span {
+        font-family: "Archivo Medium";
+    }
+}
+
+.blog-detail-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.blog-detail-title {
+    font-size: 32px;
+    font-family: "Archivo Bold", sans-serif;
+    margin-bottom: 16px;
+    color: #1d2939;
+}
+
+.blog-detail-date {
+    display: inline-block;
+    background: #f2f4f7;
+    color: #475467;
+    font-size: 16px;
+    border-radius: 16px;
+    padding: 4px 16px;
+    margin-bottom: 16px;
+}
+
+.blog-detail-divider {
+    width: 120px;
+    height: 4px;
+    background: repeating-linear-gradient(90deg, #6ad7d7 0 8px, transparent 8px 16px);
+    border-radius: 2px;
+    margin-bottom: 24px;
+}
+
+.blog-detail-desc {
+    font-size: 16px;
+    color: #475467;
+    font-style: italic;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    font-family: "Archivo Medium";
+}
+
+.blog-detail-image {
+    width: 100%;
+    margin-bottom: 32px;
+    img {
+        width: 100%;
+        border-radius: 32px;
+        object-fit: cover;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    }
+}
+
+.blog-detail-output {
+    p {
+        font-family: "Archivo Medium";
+        color: #475467;
+        margin: 5px 0px;
+        text-align: left;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    figure {
+            max-height: none !important;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0px;
+        width: 100%;
+        max-width: 100%;
+        max-height: 400px;
+        overflow: hidden;
+        border: none;
+    }
+}

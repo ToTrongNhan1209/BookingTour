@@ -8,9 +8,7 @@ const Footer: React.FC = () => {
                 <div className="footer-left">
                     <div className="footer-logo">
                         <div className="logo-icon">
-                            <div className="character">
-                                <img src="/images/vivi-removebg-preview.png" alt="" />
-                            </div>
+                            <div className="logo"><a href="/" data-discover="true"><span>Tovivu</span></a></div>
 
                         </div>
                     </div>
@@ -32,12 +30,12 @@ const Footer: React.FC = () => {
                     <div className="footer-column">
                         <h4 className="column-title">GIỚI THIỆU</h4>
                         <ul className="footer-links">
-                            <li><a href="#about">Về chúng tôi</a></li>
-                            <li><a href="#terms">Điều khoản và điều kiện</a></li>
-                            <li><a href="#privacy">Chính sách riêng tư</a></li>
-                            <li><a href="#guide">Hướng dẫn sử dụng</a></li>
-                            <li><a href="#payment">Hình thức thanh toán</a></li>
-                            <li><a href="#contact">Liên hệ</a></li>
+                            <li><a href="/ve-chung-toi">Về chúng tôi</a></li>
+                            <li><a href="/dieu-khoan-su-dung">Điều khoản và điều kiện</a></li>
+                            <li><a href="/chinh-sach-rieng-tu">Chính sách riêng tư</a></li>
+                            <li><a href="/huong-dan-su-dung">Hướng dẫn sử dụng</a></li>
+                            <li><a href="/hinh-thuc-thanh-toan">Hình thức thanh toán</a></li>
+                            <li><a href="#c/lien-he">Liên hệ</a></li>
                             <li className="contact-info">
                                 <span className="contact-label">Hotline:</span>
                                 <a href="tel:0981587469" className="contact-value">0981587469</a>

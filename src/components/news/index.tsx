@@ -97,7 +97,7 @@ const popularToursData: PopularTourData[] = [
         rooms: 56,
         date: "11/08/20250"
     },
- 
+
 ];
 
 const News: React.FC = () => {
@@ -106,27 +106,29 @@ const News: React.FC = () => {
 
     // Render tour card
     const renderTourCard = (tour: PopularTourData) => (
-        <div key={tour.id} className="tour-card-news">
-            <div className="card-images-news">
-                <img src={tour.image} alt={tour.alt} />
-            </div>
-            <div className="tour-info-news">
-                <h4>{tour.name}</h4>
-                <p>
-                    {tour.description}
-                </p>
+        <Link to={`/tin-tuc/${tour.id}`} key={tour.id} >
+            <div key={tour.id} className="tour-card-news">
+                <div className="card-images-news">
+                    <img src={tour.image} alt={tour.alt} />
+                </div>
+                <div className="tour-info-news">
+                    <h4>{tour.name}</h4>
+                    <p>
+                        {tour.description}
+                    </p>
 
-            </div>
-            <div className="info-checkout-news">
+                </div>
+                <div className="info-checkout-news">
                     <strong>{tour.date}</strong>
                 </div>
-        </div>
+            </div>
+        </Link>
     );
     return (
         <>
-                <div className="tour-list">
-                    {toursToShow.map(tour => renderTourCard(tour))}
-                </div>
+            <div className="tour-list">
+                {toursToShow.map(tour => renderTourCard(tour))}
+            </div>
         </>
     )
 }

@@ -10,20 +10,19 @@
     text-align: left;
     flex-grow: 1;
     padding-top: 64px;
-        label{
-            width: 488px;
-            font-size: 18px;
-            line-height: 28px;
-            font-family: "Archivo Regular";
-            color: #475467;
-        }
+    label {
+        width: 488px;
+        font-size: 18px;
+        line-height: 28px;
+        font-family: "Archivo Regular";
+        color: #475467;
+    }
 }
 .blog-header-title {
     font-size: 36px;
     line-height: 40px;
     font-family: "Archivo Bold";
-
-    h4{
+    h4 {
         margin: 0;
     }
 }
@@ -43,10 +42,40 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-top: 32px;
 }
-.blog-tab-item {
+.blog-tab-list {
     display: flex;
-    flex-direction: column;
     gap: 16px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 8px 12px;
 }
-
+.blog-tab-btn {
+    background: none;
+    border: none;
+    outline: none;
+    color: #475467;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    font-family: "Archivo Regular";
+    &:hover {
+        background: #e6f4f1;
+        color: #6ad7d7;
+    }
+    &.active {
+        background: #fff;
+        color: #6ad7d7;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        font-family: "Archivo Medium";
+        border: 1.5px solid #e0e0e0;
+    }
+}
+// .blog-tab-item {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 16px;
+//     min-height: 120px;
+// }
