@@ -6,7 +6,7 @@ const BlogDetail: React.FC = () => {
     return (
         <>
             <Header />
-            <LinkDirection />
+            <LinkDirection  />
 
             <div className="blog-detail-container">
                 <div className="blog-detail-content">

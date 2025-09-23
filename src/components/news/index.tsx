@@ -106,7 +106,7 @@ const News: React.FC = () => {
 
     // Render tour card
     const renderTourCard = (tour: PopularTourData) => (
-        <Link to={`/tin-tuc/${tour.id}`} key={tour.id} >
+        <Link to={`/chi-tiet-tin-tuc/${tour.id}`} key={tour.id} >
             <div key={tour.id} className="tour-card-news">
                 <div className="card-images-news">
                     <img src={tour.image} alt={tour.alt} />

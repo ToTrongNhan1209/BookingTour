@@ -62,12 +62,12 @@
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     font-family: "Archivo Regular";
     &:hover {
-        background: #e6f4f1;
-        color: #6ad7d7;
+        background: #e2f9f5;
+        color: #0e4f4f;
     }
     &.active {
         background: #fff;
-        color: #6ad7d7;
+        color: #0e4f4f;
         box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         font-family: "Archivo Medium";
         border: 1.5px solid #e0e0e0;

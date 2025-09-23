@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Interface cho dữ liệu du thuyền
 interface CruiseData {
@@ -214,6 +215,7 @@ const SearchCruise: React.FC = () => {
 
     // Render cruise card
     const renderCruiseCard = (cruise: CruiseData) => (
+        <Link to={`/chi-tiet-du-thuyen/${cruise.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
         <div key={cruise.id} className="cruise-card">
             <div className="cruise-image">
                 <img src={cruise.image} alt={cruise.alt} />
@@ -252,6 +254,7 @@ const SearchCruise: React.FC = () => {
                 </div>
             </div>
         </div>
+        </Link>
     );
 
     return (

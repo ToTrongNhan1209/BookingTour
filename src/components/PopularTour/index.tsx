@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 // Interface cho dữ liệu tour phổ biến
 interface PopularTourData {
     id: number;
@@ -124,6 +124,7 @@ const PopularTour: React.FC = () => {
 
     // Render tour card
     const renderTourCard = (tour: PopularTourData) => (
+        <Link to={`/chi-tiet-du-thuyen/${tour.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
         <div key={tour.id} className="tour-card">
             <div className="card-images">
                 <img src={tour.image} alt={tour.alt} />
@@ -160,6 +161,7 @@ const PopularTour: React.FC = () => {
                 </div>
             </div>
         </div>
+        </Link>
     );
     return (
         <>
