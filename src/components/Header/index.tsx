@@ -22,7 +22,7 @@ const Header: React.FC = () => {
                         <div className="main-nav">
                             <ul>
                                 <li><a href="/tim-du-thuyen">Tìm du thuyền</a></li>
-                                <li><a href="#">Tìm vé máy bay</a></li>
+                                <li><a href="/tim-ve-may-bay">Tìm vé máy bay</a></li>
                                 <li> <a href="/khach-san">Tìm khách sạn</a></li>
                                 <li> <a href="/tin-tuc">Tin tức</a></li>
                                 <li> <a href="/#">Về chúng tôi</a></li>

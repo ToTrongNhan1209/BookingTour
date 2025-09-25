@@ -8,6 +8,11 @@ import Footer from '../../components/Footer';
 
 
 const Homepage: React.FC = () => {
+    const loading = false;
+
+    if (loading) {
+        return <div className="loader"></div>;
+    }
     return (
         <>
             <Header />

@@ -133,8 +133,8 @@ const PopularHotel: React.FC = () => {
                 <div className="info-category">
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
-                            <path d="M12.3333 6.66536C12.3333 9.99403 8.64063 13.4607 7.40063 14.5314C7.28511 14.6182 7.14449 14.6652 6.99996 14.6652C6.85543 14.6652 6.71481 14.6182 6.59929 14.5314C5.35929 13.4607 1.66663 9.99403 1.66663 6.66536C1.66663 5.25088 2.22853 3.89432 3.22872 2.89413C4.22892 1.89393 5.58547 1.33203 6.99996 1.33203C8.41445 1.33203 9.771 1.89393 10.7712 2.89413C11.7714 3.89432 12.3333 5.25088 12.3333 6.66536Z" stroke="black" stroke-opacity="0.38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M6.99996 8.66536C8.10453 8.66536 8.99996 7.76993 8.99996 6.66536C8.99996 5.5608 8.10453 4.66536 6.99996 4.66536C5.89539 4.66536 4.99996 5.5608 4.99996 6.66536C4.99996 7.76993 5.89539 8.66536 6.99996 8.66536Z" stroke="black" stroke-opacity="0.38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12.3333 6.66536C12.3333 9.99403 8.64063 13.4607 7.40063 14.5314C7.28511 14.6182 7.14449 14.6652 6.99996 14.6652C6.85543 14.6652 6.71481 14.6182 6.59929 14.5314C5.35929 13.4607 1.66663 9.99403 1.66663 6.66536C1.66663 5.25088 2.22853 3.89432 3.22872 2.89413C4.22892 1.89393 5.58547 1.33203 6.99996 1.33203C8.41445 1.33203 9.771 1.89393 10.7712 2.89413C11.7714 3.89432 12.3333 5.25088 12.3333 6.66536Z" stroke="black" strokeOpacity="0.38" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M6.99996 8.66536C8.10453 8.66536 8.99996 7.76993 8.99996 6.66536C8.99996 5.5608 8.10453 4.66536 6.99996 4.66536C5.89539 4.66536 4.99996 5.5608 4.99996 6.66536C4.99996 7.76993 5.89539 8.66536 6.99996 8.66536Z" stroke="black" strokeOpacity="0.38" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                         {tour.location}
                     </span>
@@ -180,7 +180,7 @@ const PopularHotel: React.FC = () => {
                    <button onClick={() => setShowAll(!showAll)}>
                         Xem tất cả khách sạn
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10" fill="none">
-                            <path d="M15 1.66797L18.3333 5.0013M18.3333 5.0013L15 8.33464M18.3333 5.0013H1.66666" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 1.66797L18.3333 5.0013M18.3333 5.0013L15 8.33464M18.3333 5.0013H1.66666" stroke="gray" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                     </button>
                     </Link>
