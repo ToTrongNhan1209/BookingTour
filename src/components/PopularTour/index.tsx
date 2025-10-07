@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 interface PopularTourData {
     id: number;
     name: string;
+    slug: string;
     location: string;
     description: string;
     price: string;
@@ -14,13 +15,32 @@ interface PopularTourData {
     rooms: number;
     rating: number;
     reviewCount: number;
+    amenities: string[];
 }
 
 // Mảng dữ liệu các tour phổ biến
+
 const popularToursData: PopularTourData[] = [
     {
         id: 1,
+        name: "Du thuyền Ambassador Hạ Long",
+        slug: "du-thuyen-ambassador-ha-long",
+        location: "Vịnh Hạ Long",
+        description: "Hạ thủy 2012 - Tàu vỏ Kim loại - 20 phòng",
+        price: "3,200,000đ / khách",
+        image: "/images/duthuyen/ambasado.webp",
+        alt: "Du thuyền Ambassador",
+        launchYear: "2018",
+        material: "Tàu vỏ Kim loại",
+        rooms: 20,
+        rating: 5.0,
+        reviewCount: 2,
+        amenities: ["Phòng gia đình", "Giáp biển", "Quầy bar", "Lễ tân 24 giờ", "Nhà hàng", "Ban công riêng", "Wi-Fi", "Két an toàn"]
+    },
+    {
+        id: 2,
         name: "Du thuyền Heritage Bình Chuẩn Cát Bà",
+        slug: "du-thuyen-heritage-binh-chuan-cat-ba",
         location: "Vịnh Hạ Long",
         description: "Hạ thủy 2019 - Tàu vỏ Kim loại - 20 phòng",
         price: "4,150,000đ / khách",
@@ -29,78 +49,329 @@ const popularToursData: PopularTourData[] = [
         launchYear: "2019",
         material: "Tàu vỏ Kim loại",
         rooms: 20,
-        rating: 4.8,
-        reviewCount: 124
-    },
-    {
-        id: 2,
-        name: "Du thuyền Ambassador Hạ Long",
-        location: "Vịnh Hạ Long",
-        description: "Hạ thủy 2018 - Tàu vỏ Kim loại - 46 phòng",
-        price: "3,850,000đ / khách",
-        image: "/images/duthuyen/ambasado.webp",
-        alt: "Du thuyền Ambassador",
-        launchYear: "2018",
-        material: "Tàu vỏ Kim loại",
-        rooms: 46,
-        rating: 4.6,
-        reviewCount: 89
+        rating: 4.9,
+        reviewCount: 12,
+        amenities: ["Có bể sục", "Bao gồm tất cả các bữa ăn", "Quầy bar", "Lễ tân 24 giờ", "Nhà hàng", "Wi-Fi miễn phí", "Miễn phí kayaking", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí", "Miễn phí xe đưa đón", "Có bể bơi ngoài trời", "Phòng không hút thuốc", "Du thuyền 5 sao", "Chỗ đỗ xe"]
     },
     {
         id: 3,
         name: "Du thuyền Grand Pioneers",
+        slug: "du-thuyen-grand-pioneers",
         location: "Vịnh Hạ Long",
-        description: "Hạ thủy 2023 - Tàu vỏ Kim loại - 56 phòng",
-        price: "5,150,000đ / khách",
+        description: "Hạ thủy 2019 - Tàu vỏ Kim loại - 43 phòng",
+        price: "4,125,000đ / khách",
         image: "/images/duthuyen/Grand picasso.webp",
         alt: "Du thuyền Grand Pioneers",
-        launchYear: "2023",
+        launchYear: "2019",
         material: "Tàu vỏ Kim loại",
-        rooms: 56,
-        rating: 4.9,
-        reviewCount: 156
+        rooms: 43,
+        rating: 5.0,
+        reviewCount: 4,
+        amenities: ["Bao gồm tất cả các bữa ăn", "Giáp biển", "Quầy bar", "Lễ tân 24 giờ", "Nhà hàng", "Wi-Fi miễn phí", "Miễn phí kayaking", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí", "Miễn phí xe đưa đón", "Có bể bơi ngoài trời", "Phòng không hút thuốc", "Du thuyền 5 sao"]
     },
     {
         id: 4,
         name: "Du thuyền Capella",
+        slug: "du-thuyen-capella",
         location: "Vịnh Hạ Long",
-        description: "Hạ thủy 2022 - Tàu vỏ Kim loại - 32 phòng",
-        price: "4,800,000đ / khách",
+        description: "Hạ thủy 2019 - Tàu vỏ Kim loại - 21 phòng",
+        price: "3,700,000đ / khách",
         image: "/images/duthuyen/capella.webp",
         alt: "Du thuyền Capella",
-        launchYear: "2022",
+        launchYear: "2019",
         material: "Tàu vỏ Kim loại",
-        rooms: 32,
-        rating: 4.7,
-        reviewCount: 98
+        rooms: 21,
+        rating: 5.0,
+        reviewCount: 7,
+        amenities: ["Phòng gia đình", "Bao gồm tất cả các bữa ăn", "Quầy bar", "Lễ tân 24 giờ", "Nhà hàng", "Wi-Fi miễn phí", "Miễn phí kayaking", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí", "Miễn phí xe đưa đón", "Có bể bơi ngoài trời", "Phòng không hút thuốc", "Du thuyền 5 sao"]
     },
     {
         id: 5,
         name: "Du thuyền Scarlet Pearl",
+        slug: "du-thuyen-scarlet-pearl",
         location: "Vịnh Hạ Long",
-        description: "Hạ thủy 2021 - Tàu vỏ Kim loại - 24 phòng",
-        price: "3,200,000đ / khách",
+        description: "Hạ thủy 2020 - Tàu vỏ Kim loại - 30 phòng",
+        price: "3,500,000đ / khách",
         image: "/images/duthuyen/scarlet.webp",
         alt: "Du thuyền Scarlet Pearl",
-        launchYear: "2021",
+        launchYear: "2020",
         material: "Tàu vỏ Kim loại",
-        rooms: 24,
-        rating: 4.5,
-        reviewCount: 67
+        rooms: 30,
+        rating: 5.0,
+        reviewCount: 4,
+        amenities: ["Bao gồm tất cả các bữa ăn", "Quầy bar", "Lễ tân 24 giờ", "Nhà hàng", "Wi-Fi miễn phí", "Miễn phí kayaking", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí", "Miễn phí xe đưa đón", "Có bể bơi ngoài trời", "Phòng không hút thuốc", "Du thuyền 5 sao"]
     },
     {
         id: 6,
-        name: "Du thuyền Lyra Grandeur",
+        name: "Du thuyền La Regina Legend",
+        slug: "du-thuyen-la-regina-legend",
         location: "Vịnh Hạ Long",
-        description: "Hạ thủy 2020 - Tàu vỏ Kim loại - 40 phòng",
+        description: "Hạ thủy 2021 - Tàu vỏ Kim loại - 24 phòng",
+        price: "4,300,000đ / khách",
+        image: "/images/duthuyen/scarlet.webp",
+        alt: "Du thuyền La Regina Legend",
+        launchYear: "2021",
+        material: "Tàu vỏ Kim loại",
+        rooms: 24,
+        rating: 4.8,
+        reviewCount: 6,
+        amenities: ["Phòng gia đình", "Bao gồm tất cả các bữa ăn", "Giáp biển", "Quầy bar", "Lễ tân 24 giờ", "Nhà hàng", "Wi-Fi miễn phí", "Miễn phí kayaking", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí", "Miễn phí xe đưa đón", "Có bể bơi ngoài trời", "Phòng không hút thuốc", "Du thuyền 5 sao"]
+    },
+    {
+        id: 7,
+        name: "Du thuyền Paradise Elegance",
+        slug: "du-thuyen-paradise-elegance",
+        location: "Vịnh Hạ Long",
+        description: "Hạ thủy 2017 - Tàu vỏ Kim loại - 31 phòng",
+        price: "3,800,000đ / khách",
+        image: "/images/duthuyen/paradise_elegance.webp",
+        alt: "Du thuyền Paradise Elegance",
+        launchYear: "2017",
+        material: "Tàu vỏ Kim loại",
+        rooms: 31,
+        rating: 4.9,
+        reviewCount: 10,
+        amenities: ["Ban công riêng", "Wi-Fi", "Két an toàn", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí"]
+    },
+    {
+        id: 8,
+        name: "Du thuyền Athena Luxury",
+        slug: "du-thuyen-athena-luxury",
+        location: "Vịnh Hạ Long",
+        description: "Hạ thủy 2016 - Tàu vỏ Kim loại - 21 phòng",
+        price: "3,600,000đ / khách",
+        image: "/images/duthuyen/athena_luxury.webp",
+        alt: "Du thuyền Athena Luxury",
+        launchYear: "2016",
+        material: "Tàu vỏ Kim loại",
+        rooms: 21,
+        rating: 4.8,
+        reviewCount: 8,
+        amenities: ["Phòng gia đình", "Wi-Fi miễn phí", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí"]
+    },
+    {
+        id: 9,
+        name: "Du thuyền Mon Cheri",
+        slug: "du-thuyen-mon-cheri",
+        location: "Vịnh Lan Hạ",
+        description: "Hạ thủy 2018 - Tàu vỏ Kim loại - 18 phòng",
+        price: "4,000,000đ / khách",
+        image: "/images/duthuyen/mon_cheri.webp",
+        alt: "Du thuyền Mon Cheri",
+        launchYear: "2018",
+        material: "Tàu vỏ Kim loại",
+        rooms: 18,
+        rating: 4.7,
+        reviewCount: 6,
+        amenities: ["Ban công riêng", "Wi-Fi miễn phí", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí"]
+    },
+    {
+        id: 10,
+        name: "Du thuyền Orchid Classic",
+        slug: "du-thuyen-orchid-classic",
+        location: "Vịnh Lan Hạ",
+        description: "Hạ thủy 2016 - Tàu vỏ Kim loại - 14 phòng",
+        price: "4,200,000đ / khách",
+        image: "/images/duthuyen/orchid_classic.webp",
+        alt: "Du thuyền Orchid Classic",
+        launchYear: "2016",
+        material: "Tàu vỏ Kim loại",
+        rooms: 14,
+        rating: 4.9,
+        reviewCount: 9,
+        amenities: ["Ban công riêng", "Wi-Fi miễn phí", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí"]
+    },
+    {
+        id: 11,
+        name: "Du thuyền Stellar of the Seas",
+        slug: "du-thuyen-stellar-of-the-seas",
+        location: "Vịnh Lan Hạ",
+        description: "Hạ thủy 2018 - Tàu vỏ Kim loại - 22 phòng",
         price: "4,500,000đ / khách",
-        image: "/images/duthuyen/lyra.webp",
-        alt: "Du thuyền Lyra Grandeur",
+        image: "/images/duthuyen/stellar_seas.webp",
+        alt: "Du thuyền Stellar of the Seas",
+        launchYear: "2018",
+        material: "Tàu vỏ Kim loại",
+        rooms: 22,
+        rating: 5.0,
+        reviewCount: 12,
+        amenities: ["Ban công riêng", "Wi-Fi miễn phí", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí", "Có bể bơi ngoài trời"]
+    },
+    {
+        id: 12,
+        name: "Du thuyền Peony",
+        slug: "du-thuyen-peony",
+        location: "Vịnh Lan Hạ",
+        description: "Hạ thủy 2018 - Tàu vỏ Kim loại - 20 phòng",
+        price: "3,900,000đ / khách",
+        image: "/images/duthuyen/peony.webp",
+        alt: "Du thuyền Peony",
+        launchYear: "2018",
+        material: "Tàu vỏ Kim loại",
+        rooms: 20,
+        rating: 4.8,
+        reviewCount: 7,
+        amenities: ["Ban công riêng", "Wi-Fi miễn phí", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí"]
+    },
+    {
+        id: 13,
+        name: "Du thuyền Era",
+        slug: "du-thuyen-era",
+        location: "Vịnh Lan Hạ",
+        description: "Hạ thủy 2017 - Tàu vỏ Kim loại - 18 phòng",
+        price: "4,100,000đ / khách",
+        image: "/images/duthuyen/era.webp",
+        alt: "Du thuyền Era",
+        launchYear: "2017",
+        material: "Tàu vỏ Kim loại",
+        rooms: 18,
+        rating: 4.7,
+        reviewCount: 5,
+        amenities: ["Ban công riêng", "Wi-Fi miễn phí", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí"]
+    },
+    {
+        id: 14,
+        name: "Du thuyền President",
+        slug: "du-thuyen-president",
+        location: "Vịnh Hạ Long",
+        description: "Hạ thủy 2018 - Tàu vỏ Kim loại - 46 phòng",
+        price: "5,000,000đ / khách",
+        image: "/images/duthuyen/president.webp",
+        alt: "Du thuyền President",
+        launchYear: "2018",
+        material: "Tàu vỏ Kim loại",
+        rooms: 46,
+        rating: 5.0,
+        reviewCount: 15,
+        amenities: ["Ban công riêng", "Wi-Fi miễn phí", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí", "Có bể bơi ngoài trời"]
+    },
+    {
+        id: 15,
+        name: "Du thuyền Indochine",
+        slug: "du-thuyen-indochine",
+        location: "Vịnh Lan Hạ",
+        description: "Hạ thủy 2019 - Tàu vỏ Kim loại - 43 phòng",
+        price: "4,800,000đ / khách",
+        image: "/images/duthuyen/indochine.webp",
+        alt: "Du thuyền Indochine",
+        launchYear: "2019",
+        material: "Tàu vỏ Kim loại",
+        rooms: 43,
+        rating: 4.9,
+        reviewCount: 11,
+        amenities: ["Ban công riêng", "Wi-Fi miễn phí", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí", "Có bể bơi ngoài trời"]
+    },
+    {
+        id: 16,
+        name: "Du thuyền Heritage",
+        slug: "du-thuyen-heritage",
+        location: "Vịnh Lan Hạ",
+        description: "Hạ thủy 2019 - Tàu vỏ Kim loại - 20 phòng",
+        price: "4,150,000đ / khách",
+        image: "/images/duthuyen/heritage.webp",
+        alt: "Du thuyền Heritage",
+        launchYear: "2019",
+        material: "Tàu vỏ Kim loại",
+        rooms: 20,
+        rating: 4.9,
+        reviewCount: 12,
+        amenities: ["Có bể sục", "Bao gồm tất cả các bữa ăn", "Quầy bar", "Lễ tân 24 giờ", "Nhà hàng", "Wi-Fi miễn phí", "Miễn phí kayaking", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí", "Miễn phí xe đưa đón", "Có bể bơi ngoài trời", "Phòng không hút thuốc", "Du thuyền 5 sao", "Chỗ đỗ xe"]
+    },
+    {
+        id: 17,
+        name: "Du thuyền La Regina Grand",
+        slug: "du-thuyen-la-regina-grand",
+        location: "Vịnh Lan Hạ",
+        description: "Hạ thủy 2020 - Tàu vỏ Kim loại - 27 phòng",
+        price: "4,350,000đ / khách",
+        image: "/images/duthuyen/laregina_grand.webp",
+        alt: "Du thuyền La Regina Grand",
         launchYear: "2020",
         material: "Tàu vỏ Kim loại",
-        rooms: 40,
-        rating: 4.4,
-        reviewCount: 112
+        rooms: 27,
+        rating: 4.8,
+        reviewCount: 9,
+        amenities: ["Ban công riêng", "Wi-Fi miễn phí", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí", "Có bể bơi ngoài trời"]
+    },
+    {
+        id: 18,
+        name: "Du thuyền Signature",
+        slug: "du-thuyen-signature",
+        location: "Vịnh Hạ Long",
+        description: "Hạ thủy 2013 - Tàu vỏ Kim loại - 12 phòng",
+        price: "3,900,000đ / khách",
+        image: "/images/duthuyen/signature.webp",
+        alt: "Du thuyền Signature",
+        launchYear: "2013",
+        material: "Tàu vỏ Kim loại",
+        rooms: 12,
+        rating: 4.7,
+        reviewCount: 6,
+        amenities: ["Ban công riêng", "Wi-Fi miễn phí", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí"]
+    },
+    {
+        id: 19,
+        name: "Du thuyền Royal",
+        slug: "du-thuyen-royal",
+        location: "Vịnh Hạ Long",
+        description: "Hạ thủy 2015 - Tàu vỏ Kim loại - 16 phòng",
+        price: "3,700,000đ / khách",
+        image: "/images/duthuyen/royal.webp",
+        alt: "Du thuyền Royal",
+        launchYear: "2015",
+        material: "Tàu vỏ Kim loại",
+        rooms: 16,
+        rating: 4.8,
+        reviewCount: 7,
+        amenities: ["Ban công riêng", "Wi-Fi miễn phí", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí"]
+    },
+    {
+        id: 20,
+        name: "Du thuyền Jasmine",
+        slug: "du-thuyen-jasmine",
+        location: "Vịnh Hạ Long",
+        description: "Hạ thủy 2012 - Tàu vỏ Kim loại - 23 phòng",
+        price: "3,600,000đ / khách",
+        image: "/images/duthuyen/jasmine.webp",
+        alt: "Du thuyền Jasmine",
+        launchYear: "2012",
+        material: "Tàu vỏ Kim loại",
+        rooms: 23,
+        rating: 4.7,
+        reviewCount: 5,
+        amenities: ["Ban công riêng", "Wi-Fi miễn phí", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí"]
+    },
+    {
+        id: 21,
+        name: "Du thuyền Glory Legend",
+        slug: "du-thuyen-glory-legend",
+        location: "Vịnh Hạ Long",
+        description: "Hạ thủy 2014 - Tàu vỏ Kim loại - 17 phòng",
+        price: "3,500,000đ / khách",
+        image: "/images/duthuyen/glory_legend.webp",
+        alt: "Du thuyền Glory Legend",
+        launchYear: "2014",
+        material: "Tàu vỏ Kim loại",
+        rooms: 17,
+        rating: 4.6,
+        reviewCount: 4,
+        amenities: ["Ban công riêng", "Wi-Fi miễn phí", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí"]
+    },
+    {
+        id: 22,
+        name: "Du thuyền V'Spirit Premier",
+        slug: "du-thuyen-vspirit-premier",
+        location: "Vịnh Lan Hạ",
+        description: "Hạ thủy 2018 - Tàu vỏ Kim loại - 20 phòng",
+        price: "3,800,000đ / khách",
+        image: "/images/duthuyen/vspirit_premier.webp",
+        alt: "Du thuyền V'Spirit Premier",
+        launchYear: "2018",
+        material: "Tàu vỏ Kim loại",
+        rooms: 20,
+        rating: 4.8,
+        reviewCount: 8,
+        amenities: ["Ban công riêng", "Wi-Fi miễn phí", "Nhà hàng", "Quầy bar", "Lễ tân 24 giờ", "Trung tâm Spa & chăm sóc sức khoẻ", "Chỗ đỗ xe miễn phí"]
     }
 ];
 
@@ -124,7 +395,7 @@ const PopularTour: React.FC = () => {
 
     // Render tour card
     const renderTourCard = (tour: PopularTourData) => (
-        <Link to={`/chi-tiet-du-thuyen/${tour.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Link to={`/chi-tiet-du-thuyen/${tour.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
             <div key={tour.id} className="tour-card">
                 <div className="card-images">
                     <img src={tour.image} alt={tour.alt} />
@@ -157,7 +428,7 @@ const PopularTour: React.FC = () => {
                     </p>
                     <div className="info-checkout">
                         <strong>{tour.price}</strong>
-                        <Link to={`/chi-tiet-du-thuyen/${tour.id}`} style={{ textDecoration: 'none' }}>
+                        <Link to={`/chi-tiet-du-thuyen/${tour.slug}`} style={{ textDecoration: 'none' }}>
                             <div className="btn btn-css">Đặt ngay</div>
                         </Link>
                     </div>
@@ -182,12 +453,15 @@ const PopularTour: React.FC = () => {
                 </div>
 
                 <div className="popularship">
-                    <button onClick={() => setShowAll(!showAll)}>
-                        Xem tất cả
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10" fill="none">
-                            <path d="M15 1.66797L18.3333 5.0013M18.3333 5.0013L15 8.33464M18.3333 5.0013H1.66666" stroke="gray" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </button>
+                    <Link to="/tim-du-thuyen" style={{ textDecoration: 'none' }}>
+                        <button>
+                            Xem tất cả
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10" fill="none">
+                                <path d="M15 1.66797L18.3333 5.0013M18.3333 5.0013L15 8.33464M18.3333 5.0013H1.66666" stroke="gray" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </button>
+                    </Link>
+
                 </div>
             </section>
         </>

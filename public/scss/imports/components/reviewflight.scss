@@ -1,0 +1,151 @@
+// ...existing code...
+.rf-section {
+    padding: 60px 20px;
+    background: #fff;
+    .rf-shell {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+}
+.rf-cruise-section {
+    background: #f3ffff;
+}
+/* header grid */
+.rf-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 24px;
+    margin-top: 20px;
+    align-items: start;
+    margin-bottom: 36px;
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.rf-col-left {
+    .rf-title {
+        font-size: 32px;
+        font-family: "Archivo Bold";
+        line-height: 1.02;
+        margin: 10px 0 20px;
+        color: #0f1f2a;
+    }
+    .rf-accent {
+        width: 48px;
+        height: 6px;
+        border-radius: 6px;
+        background: linear-gradient(90deg, rgba(106, 215, 215, 0.25) 0%, rgba(106, 215, 215, 0.6) 100%);
+        box-shadow: 0 0 0 4px rgba(106, 215, 215, 0.03) inset;
+        margin-top: 8px;
+    }
+}
+
+.rf-col-right {
+    .rf-desc {
+        color: #475569;
+        font-size: 18px;
+        font-family: "Archivo Medium";
+        line-height: 1.6;
+    }
+}
+
+/* review block */
+.rf-review-wrap {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    padding: 28px 18px;
+    background: transparent;
+    border-radius: 8px;
+    margin-bottom: 28px;
+
+    @media (max-width: 900px) {
+        gap: 18px;
+        flex-direction: column;
+    }
+
+    .rf-quote-icon {
+        flex: 0 0 48px;
+        svg {
+            display: block;
+        }
+    }
+
+    .rf-review-content {
+        flex: 1;
+        .rf-text {
+            font-size: 18px;
+            color: #102029;
+            line-height: 1.9;
+            font-family: "Archivo Medium";
+            margin: 0 0 15px 0;
+        }
+        .rf-heading {
+            font-size: 20px;
+            color: #102029;
+            line-height: 1.9;
+            font-family: "Archivo Medium";
+            margin: 0 0 15px 0;
+        }
+        .rf-author {
+            font-weight: 600;
+            color: #101828;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-family: "Archivo Medium";
+        }
+        .rf-author-sep {
+            color: #0f1724;
+            opacity: 0.7;
+            margin-left: 6px;
+        }
+    }
+}
+
+/* pills */
+.rf-pills {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding-top: 6px;
+}
+
+.rf-pill {
+    background: #ffffff;
+
+    border: 1px solid rgba(226, 221, 221, 0.9);
+    border-radius: 28px;
+    padding: 10px 18px;
+    font-size: 15px;
+    color: #102029;
+    cursor: pointer;
+    transition: all 0.12s ease;
+    box-shadow: 0 2px 6px rgba(16, 24, 40, 0.02);
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(16, 24, 40, 0.06);
+    }
+    &.active {
+        background: rgba(249, 242, 242, 0.9);
+        border-color: rgba(106, 215, 215, 0.25);
+        box-shadow: 0 6px 22px rgba(106, 215, 215, 0.08);
+    }
+}
+
+/* responsive tweaks */
+@media (max-width: 600px) {
+    .rf-col-left .rf-title {
+        font-size: 26px;
+    }
+    .rf-review-content .rf-text {
+        font-size: 16px;
+    }
+    .rf-pill {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+// ...existing code...

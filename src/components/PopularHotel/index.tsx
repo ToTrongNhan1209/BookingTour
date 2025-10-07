@@ -35,7 +35,7 @@ const popularToursData: PopularTourData[] = [
     {
         id: 2,
         name: "Anya Hotel Quy Nhơn",
-        location: "Quy NhơnNhơn",
+        location: "Quy Nhơn",
         description: "229 phòng ",
         price: "3,850,000đ / phòng",
         image: "public/images/khachsan/anya.webp",
@@ -167,7 +167,7 @@ const PopularHotel: React.FC = () => {
                             đất nước cùng To Vivu.</h3>
                     </div>
                     <div className="info2-hotel">
-                        <label>Không gian nghỉ dưỡng sang trọng, tiện nghi và hiện đại cùng dịch vụ chuyên nghiệp, Mixi Vivu tự hào mang đến những trải nghiệm hoàn hảo cho kỳ nghỉ của bạn, giúp bạn tận hưởng từng khoảnh khắc một cách đáng nhớ và trọn vẹn nhất!.</label>
+                        <label>Không gian nghỉ dưỡng sang trọng, tiện nghi và hiện đại cùng dịch vụ chuyên nghiệp, ToVivu tự hào mang đến những trải nghiệm hoàn hảo cho kỳ nghỉ của bạn, giúp bạn tận hưởng từng khoảnh khắc một cách đáng nhớ và trọn vẹn nhất!.</label>
                     </div>
                 </div>
 

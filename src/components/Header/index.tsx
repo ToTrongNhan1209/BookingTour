@@ -1,7 +1,17 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 const Header: React.FC = () => {
+    const [activeNavItem, setActiveNavItem] = useState<string>("/");
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const location = useLocation();
+    const pathname = location.pathname;
+    const navLinks = [
+        { to: "/tim-du-thuyen", label: "Tìm du thuyền" },
+        { to: "/tim-ve-may-bay", label: "Tìm vé máy bay" },
+        { to: "/khach-san", label: "Tìm khách sạn" },
+        { to: "/tin-tuc", label: "Tin tức" },
+        { to: "/#", label: "Về chúng tôi" },
+    ];
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -10,35 +20,63 @@ const Header: React.FC = () => {
     const closeMobileMenu = () => {
         setIsMobileMenuOpen(false);
     };
+    const isActive = (path: string): boolean => {
+        return activeNavItem === path;
+    };
+    const handleNavClick = (path: string): void => {
+        setActiveNavItem(path);
+        localStorage.setItem("activeNavPath", path);
+    };
+    useEffect(() => { 
+        const savedActivePath = localStorage.getItem("activeNavPath");
 
+        const currentPath = window.location.pathname;
+
+        if (savedActivePath && currentPath === "/") {
+            setActiveNavItem(savedActivePath);
+        } else {
+            setActiveNavItem(currentPath);
+        }
+    }, []);
     return (
         <section className="topbar">
             <div className="container">
                 <div className="header-wrapper">
                     <div className="header-left">
                         <div className="logo">
-                            <Link to="/"><span>Tovivu</span></Link>
+                            <Link to="/" onClick={() => {
+                                setActiveNavItem("");
+                                localStorage.removeItem("activeNavPath");
+                            }}><span>Tovivu</span></Link>
                         </div>
                         <div className="main-nav">
                             <ul>
-                                <li><a href="/tim-du-thuyen">Tìm du thuyền</a></li>
-                                <li><a href="/tim-ve-may-bay">Tìm vé máy bay</a></li>
-                                <li> <a href="/khach-san">Tìm khách sạn</a></li>
-                                <li> <a href="/tin-tuc">Tin tức</a></li>
-                                <li> <a href="/#">Về chúng tôi</a></li>
+                                {navLinks.map(link => (
+                                    <li key={link.to}>
+                                        <Link
+                                            to={link.to}
+                                            className={isActive(link.to) ? "active" : ""}
+                                            onClick={() => handleNavClick(link.to)}
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    </li>
+                                ))}
                             </ul>
-                            
-                            
-                           
-                           
-                           
+
+
+
+
+
                         </div>
                     </div>
                     <div className="header-right">
-                        <div className="hotline">
-                            <i className="fa-solid fa-phone"></i><span> Hotline: 0981587489</span>
-                            <div className="divhot">Liên hệ Tovivu</div>
-                        </div>
+                        <Link to="/lien-he">
+                            <div className="hotline">
+                                <i className="fa-solid fa-phone"></i><span> Hotline: 0981587489</span>
+                                <div className="divhot">Liên hệ Tovivu</div>
+                            </div>
+                        </Link>
                         {!isMobileMenuOpen && (
                             <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label="Open menu">
                                 <span className={`hamburger`}>

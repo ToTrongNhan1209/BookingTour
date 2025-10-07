@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
                             <li><a href="/chinh-sach-rieng-tu">Chính sách riêng tư</a></li>
                             <li><a href="/huong-dan-su-dung">Hướng dẫn sử dụng</a></li>
                             <li><a href="/hinh-thuc-thanh-toan">Hình thức thanh toán</a></li>
-                            <li><a href="#c/lien-he">Liên hệ</a></li>
+                            <li><a href="/lien-he">Liên hệ</a></li>
                             <li className="contact-info">
                                 <span className="contact-label">Hotline:</span>
                                 <a href="tel:0981587469" className="contact-value">0981587469</a>
@@ -61,8 +61,8 @@ const Footer: React.FC = () => {
                     <div className="footer-column">
                         <h4 className="column-title">DU THUYỀN</h4>
                         <ul className="footer-links">
-                            <li><a href="#blog">Blog</a></li>
-                            <li><a href="#rules">Quy định chung và lưu ý</a></li>
+                            <li><a href="/tin-tuc">Blog</a></li>
+                            <li><a href="/quy-dinh-du-thuyen">Quy định chung và lưu ý</a></li>
                             <li><a href="#faq">Câu hỏi thường gặp</a></li>
                         </ul>
                     </div>

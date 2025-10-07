@@ -15,6 +15,8 @@ import Instructions from './pages/Instructionsforuse'
 import FormofPayment from './pages/FormofPayment'
 import CruiseDetail from './pages/CruiseDetail'
 import SearchFlightPage from './pages/SearchFlight'
+import ContactPage from './pages/Contact'
+import SectionRule from './pages/SectionRule'
 function App(): ReactElement {
   return (
     <BrowserRouter>
@@ -31,6 +33,8 @@ function App(): ReactElement {
         <Route path="/chinh-sach-rieng-tu" element={<Policy />} />
         <Route path="/huong-dan-su-dung" element={<Instructions />} />
         <Route path="/hinh-thuc-thanh-toan" element={<FormofPayment />} />
+        <Route path="/lien-he" element={<ContactPage />} />
+        <Route path="/quy-dinh-du-thuyen" element={<SectionRule />} />
       </Routes>
     </BrowserRouter>
   )

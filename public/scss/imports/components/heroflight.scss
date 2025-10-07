@@ -1,0 +1,197 @@
+.flight-hero {
+    position: relative;
+    max-width: 1382px;
+    margin: 115px auto 0 auto;
+    padding: 0 20px;
+    .flight-hero-bg {
+        position: relative;
+        height: 600px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+    .flight-hero-shell {
+        max-width: 1100px;
+        margin: -60px auto 0 auto;
+        background: #fff;
+        border-radius: 28px;
+        box-shadow: 0 6px 24px rgba(16, 24, 40, 0.1);
+        padding: 38px 38px 32px 38px;
+        position: relative;
+    }
+}
+
+.flight-head {
+    text-align: center;
+    margin-bottom: 22px;
+    .flight-title {
+        margin: 0 0 6px 0;
+        font-size: 40px;
+        padding: 20px 20px 10px;
+        font-family: "Archivo Bold";
+    }
+    .flight-subtitle {
+        margin: 0;
+        color: #666;
+        font-size: 18px;
+        padding: 5px 20px 20px;
+        font-family: "Archivo Regular";
+    }
+}
+
+.flight-search-box {
+    margin-top: 12px;
+    .flight-search-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 18px;
+        .flight-radio-group {
+            display: flex;
+            gap: 18px;
+            .flight-radio {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 16px;
+                color: #1f2937;
+                input {
+                    accent-color: #48c6c6;
+                    border: 1px solid #0e4f4f;
+                }
+                span {
+                    font-family: "Archivo Medium";
+                }
+            }
+        }
+        .flight-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            font-size: 15px;
+            color: #344054;
+            input {
+                accent-color: #48c6c6;
+            }
+            span {
+                font-family: "Archivo Medium";
+            }
+        }
+    }
+    .flight-search-grid {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 0;
+    }
+    .flight-label-col2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 32px;
+        grid-column-gap: 16px;
+        margin: 20px 0;
+    }
+    .flight-label-col-4 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 24px;
+        grid-column-gap: 16px;
+    }
+    // .flight-search-grid {
+    //     display: grid;
+    //     grid-template-columns: repeat(2, 1fr);
+    //     gap: 18px 22px;
+    //     align-items: center;
+    //     @media (max-width: 900px) {
+    //         grid-template-columns: 1fr;
+    //     }
+    // }
+    .flight-form-field {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        // &.flight-form-action {
+        //     align-items: flex-end;
+        //     justify-content: flex-end;
+        //     margin-top: 24px;
+        //     grid-column: span 2;
+        // }
+        .flight-label {
+            position: absolute;
+            top: 0;
+            left: 18px;
+            transform: translateY(-50%);
+            background: #fff;
+            padding: 0 8px;
+            font-size: 13px;
+            font-family: "Archivo Medium";
+            color: #475467;
+            font-weight: 500;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .flight-input {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #eaecf0;
+            box-shadow: 0px 1px 2px 0px #1018280d;
+            border-radius: 40px;
+
+            &:hover {
+                border: 1px solid #77dada;
+                box-shadow: 0 0 0 4px #caf8f8;
+            }
+            .flight-icon {
+                position: absolute;
+                left: 20px;
+                display: inline-flex;
+                align-items: center;
+                color: #98a2b3;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            input {
+                padding: 20px 16px 20px 50px;
+                border: none;
+                outline: none;
+                background: transparent;
+                font-size: 15px;
+                color: #98a2b3;
+                width: 100%;
+                font-family: "Archivo Medium";
+                ::placeholder {
+                    color: #98a2b3;
+                }
+            }
+            input[type="number"] {
+                // text-align: left;
+                // padding: 0;
+            }
+        }
+    }
+    .flight-btn {
+        padding: 16px 20px;
+        border-radius: 40px;
+        background: #6ad7d7;
+        color: #063636;
+        border: none;
+        font-size: 17px;
+        font-family: "Archivo Medium";
+        cursor: pointer;
+        transition: background 0.15s;
+        &:hover {
+            background: #0e4f4f;
+            color: #fff;
+        }
+    }
+}

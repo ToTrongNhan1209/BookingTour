@@ -99,6 +99,261 @@ const hotelData: HotelData[] = [
         rating: 5.0,
         reviewCount: 4,
         amenities: ["Phòng có bồn tắm", "Lễ tân 24h", "Nhà hàng", "Ban công/Cửa sổ", "Wifi miễn phí"]
+    },
+    {
+        id: 6,
+        name: "Vinpearl Resort & Spa Hạ Long",
+        location: "Vịnh Hạ Long",
+        description: "384 phòng",
+        price: "2,800,000đ / phòng",
+        salePrice: "2,200,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Vinpearl Resort & Spa Hạ Long",
+        starRating: 5,
+        rooms: 384,
+        rating: 4.9,
+        reviewCount: 18,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 7,
+        name: "FLC Grand Hotel Hạ Long",
+        location: "Vịnh Hạ Long",
+        description: "649 phòng",
+        price: "2,500,000đ / phòng",
+        salePrice: "2,000,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "FLC Grand Hotel Hạ Long",
+        starRating: 5,
+        rooms: 649,
+        rating: 4.8,
+        reviewCount: 15,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 8,
+        name: "Novotel Hạ Long Bay",
+        location: "Vịnh Hạ Long",
+        description: "225 phòng",
+        price: "2,200,000đ / phòng",
+        salePrice: "1,800,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Novotel Hạ Long Bay",
+        starRating: 4,
+        rooms: 225,
+        rating: 4.7,
+        reviewCount: 10,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 9,
+        name: "Muong Thanh Luxury Quang Ninh",
+        location: "Vịnh Hạ Long",
+        description: "508 phòng",
+        price: "2,000,000đ / phòng",
+        salePrice: "1,600,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Muong Thanh Luxury Quang Ninh",
+        starRating: 5,
+        rooms: 508,
+        rating: 4.8,
+        reviewCount: 12,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 10,
+        name: "Royal Lotus Hotel Hạ Long",
+        location: "Vịnh Hạ Long",
+        description: "147 phòng",
+        price: "1,800,000đ / phòng",
+        salePrice: "1,400,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Royal Lotus Hotel Hạ Long",
+        starRating: 4,
+        rooms: 147,
+        rating: 4.6,
+        reviewCount: 8,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 11,
+        name: "Premier Village Hạ Long Bay Resort",
+        location: "Vịnh Hạ Long",
+        description: "67 phòng",
+        price: "3,500,000đ / phòng",
+        salePrice: "2,900,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Premier Village Hạ Long Bay Resort",
+        starRating: 5,
+        rooms: 67,
+        rating: 4.9,
+        reviewCount: 14,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 12,
+        name: "Saigon Halong Hotel",
+        location: "Vịnh Hạ Long",
+        description: "228 phòng",
+        price: "1,700,000đ / phòng",
+        salePrice: "1,300,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Saigon Halong Hotel",
+        starRating: 4,
+        rooms: 228,
+        rating: 4.7,
+        reviewCount: 9,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 13,
+        name: "Halong Plaza Hotel",
+        location: "Vịnh Hạ Long",
+        description: "200 phòng",
+        price: "1,900,000đ / phòng",
+        salePrice: "1,500,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Halong Plaza Hotel",
+        starRating: 4,
+        rooms: 200,
+        rating: 4.6,
+        reviewCount: 7,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 14,
+        name: "Ha Long Palace Hotel",
+        location: "Vịnh Hạ Long",
+        description: "119 phòng",
+        price: "1,600,000đ / phòng",
+        salePrice: "1,200,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Ha Long Palace Hotel",
+        starRating: 4,
+        rooms: 119,
+        rating: 4.5,
+        reviewCount: 6,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 15,
+        name: "Halong Boutique Hotel",
+        location: "Vịnh Hạ Long",
+        description: "90 phòng",
+        price: "1,400,000đ / phòng",
+        salePrice: "1,100,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Halong Boutique Hotel",
+        starRating: 3,
+        rooms: 90,
+        rating: 4.4,
+        reviewCount: 5,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 16,
+        name: "Halong Bay Hotel",
+        location: "Vịnh Hạ Long",
+        description: "60 phòng",
+        price: "1,200,000đ / phòng",
+        salePrice: "900,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Halong Bay Hotel",
+        starRating: 3,
+        rooms: 60,
+        rating: 4.3,
+        reviewCount: 4,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 17,
+        name: "Halong Pearl Hotel",
+        location: "Vịnh Hạ Long",
+        description: "160 phòng",
+        price: "1,700,000đ / phòng",
+        salePrice: "1,300,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Halong Pearl Hotel",
+        starRating: 4,
+        rooms: 160,
+        rating: 4.5,
+        reviewCount: 6,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 18,
+        name: "Halong DC Hotel",
+        location: "Vịnh Hạ Long",
+        description: "80 phòng",
+        price: "1,300,000đ / phòng",
+        salePrice: "1,000,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Halong DC Hotel",
+        starRating: 3,
+        rooms: 80,
+        rating: 4.2,
+        reviewCount: 3,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 19,
+        name: "Halong Dream Hotel",
+        location: "Vịnh Hạ Long",
+        description: "184 phòng",
+        price: "1,600,000đ / phòng",
+        salePrice: "1,200,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Halong Dream Hotel",
+        starRating: 4,
+        rooms: 184,
+        rating: 4.4,
+        reviewCount: 5,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 20,
+        name: "Halong Paradise Suites Hotel",
+        location: "Vịnh Hạ Long",
+        description: "156 phòng",
+        price: "1,800,000đ / phòng",
+        salePrice: "1,400,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Halong Paradise Suites Hotel",
+        starRating: 4,
+        rooms: 156,
+        rating: 4.5,
+        reviewCount: 6,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 21,
+        name: "Halong Sunny Hotel",
+        location: "Vịnh Hạ Long",
+        description: "50 phòng",
+        price: "1,100,000đ / phòng",
+        salePrice: "900,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Halong Sunny Hotel",
+        starRating: 3,
+        rooms: 50,
+        rating: 4.1,
+        reviewCount: 2,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
+    },
+    {
+        id: 22,
+        name: "Halong Green Hotel",
+        location: "Vịnh Hạ Long",
+        description: "70 phòng",
+        price: "1,200,000đ / phòng",
+        salePrice: "1,000,000đ / phòng",
+        image: "/images/khachsan/halong.webp",
+        alt: "Halong Green Hotel",
+        starRating: 3,
+        rooms: 70,
+        rating: 4.2,
+        reviewCount: 3,
+        amenities: ["Bể bơi ngoài trời", "Nhà hàng", "Wifi miễn phí", "Lễ tân 24h", "Phòng có bồn tắm", "Ban công/Cửa sổ"]
     }
 ];
 
@@ -175,8 +430,10 @@ const SearchHotel: React.FC = () => {
     });
 
     // Pagination logic
-    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    const totalPages = Math.ceil(filteredHotels.length / itemsPerPage);
     const startItem = (currentPage - 1) * itemsPerPage + 1;
+    const endItem = Math.min(currentPage * itemsPerPage, filteredHotels.length);
+    const paginatedHotels = filteredHotels.slice(startItem - 1, endItem);
 
     const handlePageChange = (page: number) => {
         setCurrentPage(page);
@@ -285,11 +542,11 @@ const SearchHotel: React.FC = () => {
 
                 {/* Hotel List */}
                 <div className="cruise-list">
-                    {filteredHotels.map(hotel => renderHotelCard(hotel))}
+                    {paginatedHotels.map(hotel => renderHotelCard(hotel))}
 
                     <div className="pagination-container">
                 <div className="pagination-info">
-                    <span>Đang xem: {startItem} của {totalItems}</span>
+                    <span>Đang xem: {startItem}-{endItem} của {filteredHotels.length}</span>
                 </div>
                 <div className="pagination-controls">
                     <button 

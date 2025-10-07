@@ -1094,7 +1094,19 @@
 }
 
 /* HTML: <div className="loader"></div> */
-.loader {
+.fullscreen-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fullscreen-loading .loader {
     --d: 22px;
     width: 4px;
     top: 50%;

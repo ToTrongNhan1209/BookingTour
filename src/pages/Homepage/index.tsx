@@ -5,8 +5,8 @@ import PopularTour from '../../components/PopularTour';
 import CategoryCN from '../../components/category';
 import News from '../../components/news';
 import Footer from '../../components/Footer';
-
-
+import ReviewCruise from '../../components/reviewcruise';
+import PartnerCruise from '../../components/partnercruise';
 const Homepage: React.FC = () => {
     const loading = false;
 
@@ -23,7 +23,10 @@ const Homepage: React.FC = () => {
                 searchPlaceholder='Nhập tên du thuyền'
             />
             <PopularTour />
+
+            <ReviewCruise />
             <CategoryCN />
+            <PartnerCruise />
             <section className="popular-tours-news">
                 <div className="tour-infomation-news">
                     <div className="info1-news">

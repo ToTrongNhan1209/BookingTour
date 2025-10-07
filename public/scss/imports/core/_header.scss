@@ -97,15 +97,43 @@ body {
   a {
     margin: 0 14px;
     text-decoration: none;
-    color: #111;
+    color: #0e4f4f;
     font-size: 16px;
     font-weight: 500;
     font-family: "Archivo Medium";
     padding: 15px 0;
     z-index: 10000;
-    transition: max-height 1.2s ease;
-    
-    
+    padding: 25px 0;
+    // transition: max-height 1.2s ease;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &.active {
+      color: #39c0c8;
+
+      &:after {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #39c0c8;
+      transition: width 0.3s ease;
+    }
+
+    &:active {
+      color: #39c0c8;
+
+      &:after {
+        width: 100%;
+      }
+    }
 
     &:hover {
       color: #39c0c8;
@@ -115,9 +143,9 @@ body {
         width: 100%;
       }
     }
-    &:after{
-      border: 3px solid #0e4f4f;
-    }
+    // &:after {
+    //   border: 3px solid #0e4f4f;
+    // }
   }
 }
 
@@ -126,9 +154,12 @@ body {
   align-items: center;
   gap: 12px;
 
+  i {
+    color: #0e4f4f;
+  }
   span {
     font-size: 16px;
-    color: #333;
+    color: #0e4f4f;
     font-family: "Archivo Bold";
   }
 }

@@ -4,7 +4,7 @@ In the rapidly growing creative and media industry, there is an increasing deman
 
 This creates a need for a versatile space solution that combines relaxation comforts with creative services, meeting all customer requirements.
 
-SONA SPACE was born with the mission to provide premium rental studio spaces, fully equipped for rest, living, and working, while also offering professional photography services. Our goal is to deliver the most convenient and perfect experience for our customers.
+tovivu was born with the mission to provide premium rental studio spaces, fully equipped for rest, living, and working, while also offering professional photography services. Our goal is to deliver the most convenient and perfect experience for our customers.
 
 
 # React + TypeScript + Vite

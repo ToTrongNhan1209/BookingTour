@@ -1,14 +1,18 @@
 import React from 'react';
 import Header from '../../components/Header';
-// import SearchCruise from '../../components/SearchCruise';
 import Footer from '../../components/Footer';
-// import Hero from '../../components/Hero';
+import HeroFlight from '../../components/HeroFlight';
+import ReviewFlight from '../../components/reviewflight';
+import Partner from '../../components/partner';
 const SearchFlightPage: React.FC = () => {
     return (
         <>
             <Header />
             <div className="loader"></div>
-            {/* <Footer /> */}
+            <HeroFlight />
+            <ReviewFlight />
+            <Partner />
+            <Footer />
         </>
     );
 };

@@ -5,11 +5,12 @@ import PopularHotel from '../../components/PopularHotel';
 import CategoryCN from '../../components/category';
 // import News from '../../components/news';
 import Footer from '../../components/Footer';
+import HeroHotel from '../../components/HeroHotel';
 const Hotel: React.FC = () => {
     return (
         <>
             <Header />
-            <Hero
+            <HeroHotel
                 title='Bạn muốn đặt khách sạn ở đâu?'
                 subtitle='Hàng nghìn phòng giá tốt đang chờ bạn'
                 videoSrc='./video/videoressort.mp4'
